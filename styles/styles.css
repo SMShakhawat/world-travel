@@ -1,0 +1,102 @@
+/* shared styles */
+*{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+}
+.section{
+    padding: 3rem;
+}
+/* Navbar style */
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-logo{
+    display: flex;
+    gap: 5px;
+}
+.travel{
+    color: #FF5400;
+}
+.menu> ul{
+    display: flex;
+    gap: 10px;
+}
+ul> li{
+    list-style: none;
+}
+li> a{
+    text-decoration: none;
+    color: #424247;
+    font-weight: 300;
+}
+.change:hover {
+    color: #FF5400;
+}
+/* banner style */
+.banner{
+    background-image: url(../Images/Group\ 13\ \(1\)\ \(1\).png);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+.banner-description{
+    margin: 2rem;
+    padding: 6rem;
+}
+.banner-title{
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    font-size: 3rem;
+}
+.banner-text{
+    color: #FFFFFF;
+    margin-bottom: 4rem;
+}
+.banner-input{ 
+    display: flex;
+    justify-content: space-around;
+    background-color: #d8d8ee71;
+    border-radius: 10px;
+    gap: 4px;
+}
+.input-text{
+    border: none;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: .4rem;
+    width: 25%;
+    margin: .7rem;
+}
+#find{
+    background-color: #FF5400;
+    color: #FFFFFF;
+}
+/* popular style */
+.popular-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.popular-title{
+    font-size: 2rem;
+}
+.popular-detaisl p{
+    font-weight: 100;
+}
+.popular-detaisl li{
+    list-style: circle;
+}
+.btn-more{
+    background-color: #FF5400;
+    color: #FFFFFF;
+    padding: .8em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+.popular-img img{
+    width: 100%;
+}
