@@ -1,10 +1,32 @@
 /* shared styles */
+body{
+    margin: 0 auto;
+}
 *{
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
 }
 .section{
     padding: 3rem;
+}
+.section-title{
+    font-size: 2rem;
+}
+.text-description{
+    font-weight: 100;
+}
+.text-center{
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+h2{
+    margin: 0;
+}
+h3{
+    margin: 0;
 }
 /* Navbar style */
 .nav{
@@ -13,7 +35,10 @@
 }
 .nav-logo{
     display: flex;
-    gap: 5px;
+    gap: 6px;
+}
+.logo-title{
+    font-weight: 800;
 }
 .travel{
     color: #FF5400;
@@ -80,12 +105,10 @@ li> a{
     justify-content: space-between;
     gap: 1rem;
 }
-.popular-title{
-    font-size: 2rem;
-}
-.popular-detaisl p{
+
+/* .popular-detaisl p{
     font-weight: 100;
-}
+} */
 .popular-detaisl li{
     list-style: circle;
 }
@@ -97,6 +120,61 @@ li> a{
     border-radius: 5px;
     font-weight: bolder;
 }
-.popular-img img{
-    width: 100%;
+/* Choose your destination section css */
+h5{
+    margin: 0;
+}
+.country{
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    position: relative;
+    bottom: 55%;
+    left: 40%;
+}
+
+.maldvs{
+    grid-area: maldvs;
+}
+.indo{
+    grid-area: indo;
+}
+.slanka{
+    grid-area: slanka;
+}
+.namerica{
+    grid-area: namerica;
+}
+.ksmr{
+    grid-area: ksmr;
+}
+.bdesh{
+    grid-area: bdesh;
+}
+.bndrbn{
+    grid-area: bndrbn;
+}
+.destination-img{
+    display: grid;
+    gap: 1.25rem;
+    grid-template-areas: 
+    "maldvs maldvs maldvs maldvs maldvs indo indo indo indo indo"
+    "slanka slanka slanka namerica namerica namerica namerica namerica ksmr ksmr"
+    "bdesh bdesh bdesh bdesh bndrbn bndrbn bndrbn bndrbn bndrbn bndrbn"
+    ;
+}
+footer{
+    align-items: center;
+    text-align: center;
+}
+.footer-logo{
+    display: flex;
+    gap: 10px;
+}
+.footer-icon{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-icon img{
+    width: fit-content;
 }
