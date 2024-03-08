@@ -7,7 +7,8 @@ body{
     font-optical-sizing: auto;
 }
 .section{
-    padding: 3rem;
+    /* width: auto; */
+    padding: 3rem ;
 }
 .section-title{
     font-size: 2rem;
@@ -61,19 +62,21 @@ li> a{
 /* banner style */
 .banner{
     background-image: url(../Images/Group\ 13\ \(1\)\ \(1\).png);
-    width: 100%;
+    background-repeat: no-repeat;
+    width: max-content;
     border-radius: 10px;
     text-align: center;
 }
 .banner-description{
-    margin: 2rem;
-    padding: 6rem;
+    margin-top: 2rem;
+    padding: 7rem;
 }
 .banner-title{
     color: #FFFFFF;
     margin-bottom: 3rem;
     font-weight: 800;
     font-size: 3rem;
+    padding: 2.5rem;
 }
 .banner-text{
     color: #FFFFFF;
@@ -84,16 +87,16 @@ li> a{
     justify-content: space-around;
     background-color: #d8d8ee71;
     border-radius: 10px;
-    gap: 4px;
+    gap: 6px;
 }
 .input-text{
-    border: none;
-    text-align: center;
     background-color: #FFFFFF;
     border-radius: 5px;
-    padding: .4rem;
     width: 25%;
-    margin: .7rem;
+    border: none;
+    text-align: center;
+    padding: .4rem; 
+    margin: .7rem;   
 }
 #find{
     background-color: #FF5400;
@@ -161,12 +164,39 @@ h5{
     display: grid;
     gap: 1.25rem;
     grid-template-areas: 
-    "maldvs maldvs maldvs maldvs maldvs indo indo indo indo indo"
-    "slanka slanka slanka namerica namerica namerica namerica namerica ksmr ksmr"
-    "bdesh bdesh bdesh bdesh bndrbn bndrbn bndrbn bndrbn bndrbn bndrbn"
+    "maldvs  maldvs  maldvs  maldvs   maldvs    indo     indo     indo     indo   indo"
+    "slanka  slanka  slanka  namerica namerica  namerica namerica namerica ksmr   ksmr"
+    "bdesh   bdesh   bdesh   bdesh    bndrbn    bndrbn   bndrbn   bndrbn   bndrbn bndrbn"
     ;
 }
 /* Why choose us section style */
+.choose-details{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+.choose-card{
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+}
+.choose-card img{
+    width: 3rem;
+    height: 3rem;
+}
+.bg-color{
+    border: none;
+    background-color: #f1e9df;
+    border-radius: 5px;
+}
+.bg-color-2{
+    border: none;
+    background-color: #d5e8ed;
+    border-radius: 5px;
+}
+.bg-width{
+    margin-left: 25%;
+    margin-right: 25%;
+}
 /* news section style */
 .news-section{
     border: 1px solid tomato;
@@ -244,4 +274,14 @@ hr{
     color: #424247;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .banner-input{
+        flex-direction: row;
+    }
+    .newsletter-section{
+        flex-direction: column;
+    }
+    
 }
