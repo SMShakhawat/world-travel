@@ -2,13 +2,12 @@
 body{
     margin: 0 auto;
 }
-*{
+* {
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
 }
 .section{
-    /* width: auto; */
-    padding: 3rem ;
+    padding: 3rem;
 }
 .section-title{
     font-size: 2rem;
@@ -23,10 +22,7 @@ img{
     width: 100%;
     height: 100%;
 }
-h2{
-    margin: 0;
-}
-h3{
+h2, h3, h5{
     margin: 0;
 }
 /* Navbar style */
@@ -128,9 +124,6 @@ li> a{
     font-weight: bolder;
 }
 /* Choose your destination section css */
-h5{
-    margin: 0;
-}
 .country{
     color: #FFFFFF;
     font-size: 1.25rem;
@@ -138,7 +131,9 @@ h5{
     bottom: 55%;
     left: 40%;
 }
-
+.destination-content{
+    width: 100%;
+}
 .maldvs{
     grid-area: maldvs;
 }
@@ -251,7 +246,7 @@ h5{
 /* footer section style */
 .footer{
     background-color: #ebebf1;
-    padding: 2rem;
+    padding-top: 2rem;
 }
 .footer-logo{
     display: flex;
@@ -280,8 +275,23 @@ hr{
     .banner-input{
         flex-direction: row;
     }
-    .newsletter-section{
+    .popular-section, .choose-details, .newsletter-section{
         flex-direction: column;
     }
-    
+    .bg-width{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .destination-img{
+        grid-template-areas: 
+        "maldvs"   
+        "indo"
+        "slanka"
+        "namerica"
+        "ksmr"
+        "bdesh"
+        "bndrbn"
+        ;
+    }
+
 }
