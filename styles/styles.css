@@ -1,6 +1,7 @@
 /* shared styles */
 body{
-    margin: 0 auto;
+    margin: auto;
+    padding: auto;
 }
 * {
     font-family: "Mulish", sans-serif;
@@ -32,7 +33,7 @@ h2, h3, h5{
 }
 .nav-logo{
     display: flex;
-    gap: 6px;
+    gap: 1rem;
 }
 .logo-title{
     font-weight: 800;
@@ -42,7 +43,7 @@ h2, h3, h5{
 }
 .menu> ul{
     display: flex;
-    gap: 10px;
+    gap: 1.25rem;
 }
 ul> li{
     list-style: none;
@@ -59,7 +60,7 @@ li> a{
 .banner{
     background-image: url(../Images/Group\ 13\ \(1\)\ \(1\).png);
     background-repeat: no-repeat;
-    width: max-content;
+    background-size: cover;
     border-radius: 10px;
     text-align: center;
 }
@@ -108,10 +109,6 @@ li> a{
     justify-content: space-between;
     gap: 1rem;
 }
-
-/* .popular-detaisl p{
-    font-weight: 100;
-} */
 .popular-detaisl li{
     list-style: circle;
 }
@@ -134,35 +131,28 @@ li> a{
 .destination-content{
     width: 100%;
 }
-.maldvs{
-    grid-area: maldvs;
-}
-.indo{
-    grid-area: indo;
-}
-.slanka{
-    grid-area: slanka;
-}
-.namerica{
-    grid-area: namerica;
-}
-.ksmr{
-    grid-area: ksmr;
-}
-.bdesh{
-    grid-area: bdesh;
-}
-.bndrbn{
-    grid-area: bndrbn;
-}
 .destination-img{
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 1.25rem;
-    grid-template-areas: 
-    "maldvs  maldvs  maldvs  maldvs   maldvs    indo     indo     indo     indo   indo"
-    "slanka  slanka  slanka  namerica namerica  namerica namerica namerica ksmr   ksmr"
-    "bdesh   bdesh   bdesh   bdesh    bndrbn    bndrbn   bndrbn   bndrbn   bndrbn bndrbn"
-    ;
+}
+.maldvs, .indo {
+    grid-column: span 6;
+}
+.slanka{
+    grid-column: span 4;
+}
+.namerica {
+    grid-column: span 5;
+}
+.ksmr {
+    grid-column: span 3;
+}
+.bdesh {
+    grid-column: span 5;
+}
+.bndrbn {
+    grid-column: span 7;
 }
 /* Why choose us section style */
 .choose-details{
@@ -198,6 +188,8 @@ li> a{
     border-radius: 5px;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    padding-bottom: 1.25rem;
+    height: max-content;
 }
 .news-input{
     display: flex;
@@ -223,10 +215,10 @@ li> a{
 .newsletter-section{
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 1.25rem;
 }
 .newsletter-img> img{
-    width: 100%;
+    height: fit-content;
 }
 .wrap{
     text-wrap: wrap;
@@ -250,7 +242,7 @@ li> a{
 }
 .footer-logo{
     display: flex;
-    gap: 10px;
+    gap: 1.25rem;
     justify-content: center;
 }
 .footer-icon{
@@ -272,8 +264,34 @@ hr{
 }
 
 @media screen and (max-width: 600px) {
+    .nav-logo{
+        flex-direction: column;
+    }
+    .menu> ul{
+        flex-direction: column;
+    }
+    .banner-description{
+        margin-top: 1.25rem;
+        padding: 1.25rem;
+    }
     .banner-input{
-        flex-direction: row;
+        display: block;
+    }
+    .banner{
+        background-size: cover;
+    }
+    .banner-input{ 
+        flex-direction: column;
+    }
+    .input-text{
+        width: fit-content;  
+    }
+    #find{
+        width: 11rem;
+    }
+    .bolder{
+        /* font-size: large; */
+        font-weight: 400;
     }
     .popular-section, .choose-details, .newsletter-section{
         flex-direction: column;
@@ -283,15 +301,19 @@ hr{
         margin-right: 0;
     }
     .destination-img{
-        grid-template-areas: 
-        "maldvs"   
-        "indo"
-        "slanka"
-        "namerica"
-        "ksmr"
-        "bdesh"
-        "bndrbn"
-        ;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
     }
-
+    .maldvs, .indo, .slanka, .namerica, .ksmr, .bdesh, .bndrbn {
+        grid-column: span 3;
+    }
+    hr{
+        width: 100%;
+    }
+    .save-btn{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        left: 40%;
+        bottom: 60%;
+    }
 }
